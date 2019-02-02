@@ -1,5 +1,6 @@
 package Service;
 
+/*
 import Model.Address;
 import Model.Registration;
 import Model.User;
@@ -12,6 +13,8 @@ public class UserService {
     public UserService(SessionFactory session) {
         this.sessionFactory = session;
     }
+
+
 
     public String registerUser(Registration registration) {
         User newUser = new User(
@@ -36,5 +39,7 @@ public class UserService {
         registerSession.close();
 
         return "Registration Complete";
+        return null;
     }
 }
+*/

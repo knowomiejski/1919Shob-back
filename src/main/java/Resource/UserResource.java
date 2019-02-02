@@ -1,25 +1,26 @@
 package Resource;
 
-import Model.Registration;
-import Service.UserService;
+import Model.User;
+import Persistance.UserDao;
+import io.dropwizard.hibernate.UnitOfWork;
 
-import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Path("/settings")
+@Path("/user")
+@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class UserResource {
-    private final UserService service;
+    private final UserDao userDao;
 
-    public UserResource(UserService service) {
-        this.service = service;
+    public UserResource(UserDao userDao) {
+        this.userDao = userDao;
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @RolesAllowed("Guest")
-    public String registerUser(Registration registration){
-        return service.registerUser(registration);
+    @UnitOfWork
+    public User add(User user){
+        System.out.println("got good request");
+        return userDao.insert(user);
     }
 }

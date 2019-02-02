@@ -1,8 +1,8 @@
 import Model.Address;
 import Model.Item;
 import Model.User;
+import Persistance.UserDao;
 import Resource.UserResource;
-import Service.UserService;
 import io.dropwizard.Application;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
@@ -31,9 +31,10 @@ public class WebshopApplication extends Application<WebshopConfig> {
     @Override
     public void run(WebshopConfig webshopConfig, Environment environment) throws Exception {
 
-        final UserService userService = new UserService(hibernate.getSessionFactory());
+        final UserDao userDao = new UserDao(hibernate.getSessionFactory());
 
-        final UserResource userResource = new UserResource(userService);
+        final UserResource userResource = new UserResource(userDao);
+
         environment.jersey().register(userResource);
     }
 }

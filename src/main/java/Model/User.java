@@ -1,34 +1,35 @@
 package Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "1919ShopUser")
 public class User {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "UserID")
-    int userID;
+    @JsonProperty
+    private int userId;
+
     @Column(name = "Email")
-    String email;
+    @JsonProperty
+    private String email;
+
     @Column(name = "Password")
-    String passwd;
-//    @OneToOne
-//    Address address;
+    @JsonProperty
+    private String password;
 
-    public User(String email, String passwd) {
-        this.email = email;
-        this.passwd = passwd;
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 
-    public User() {
-    }
 
-//    public Address getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
 }
