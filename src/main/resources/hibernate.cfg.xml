@@ -1,0 +1,27 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE hibernate-configuration PUBLIC-->
+        <!--"-//Hibernate/Hibernate Configuration DTD 3.0//EN"-->
+        <!--"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">-->
+<!--<hibernate-configuration>-->
+    <!--<session-factory>-->
+
+        <!--&lt;!&ndash; database connection properties &ndash;&gt;-->
+        <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:mysql://94.209.248.59:3306/1919Shop</property>-->
+        <!--<property name="hibernate.connection.username">root</property>-->
+        <!--<property name="hibernate.connection.password">Banaan</property>-->
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+        <!--&lt;!&ndash; show mysql queries output in console &ndash;&gt;-->
+        <!--<property name="hibernate.show_sql">true</property>-->
+
+        <!--&lt;!&ndash; manage automatic database creation &ndash;&gt;-->
+        <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
+
+        <!--&lt;!&ndash; add resources here &ndash;&gt;-->
+        <!--<mapping class="Model.User"/>-->
+        <!--<mapping class="Model.Item"/>-->
+        <!--<mapping class="Model.Address"/>-->
+
+    <!--</session-factory>-->
+<!--</hibernate-configuration>-->

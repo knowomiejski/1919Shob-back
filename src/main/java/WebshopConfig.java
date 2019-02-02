@@ -1,79 +1,39 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
+import io.dropwizard.db.DataSourceFactory;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 public class WebshopConfig extends Configuration {
     @NotEmpty
-    private String productTemplate;
+    @JsonProperty
+    private String name;
 
-    @NotEmpty
-    private String defaultProduct = "";
-
-    @NotEmpty
-    private String nameUser;
-
-    @NotEmpty
-    private String defaultName = "Mah Dude";
-
-    @NotEmpty
-    private String passwd;
-
-    public String getPasswd() {
-        return passwd;
-    }
-
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @NotEmpty
-    private String email;
+    @Valid
+    @NotNull
+    private DataSourceFactory database = new DataSourceFactory();
 
     @JsonProperty
-    public String getProductTemplate() {
-        return productTemplate;
+    public String getName() {
+        return "1919Shop";
     }
 
     @JsonProperty
-    public void setProductTemplate(String productTemplate) {
-        this.productTemplate = productTemplate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @JsonProperty
-    public String getDefaultProduct() {
-        return defaultProduct;
+    @JsonProperty("database")
+    public void setDataSourceFactory(DataSourceFactory factory) {
+        this.database = factory;
     }
 
-    @JsonProperty
-    public void setDefaultProduct(String defaultProduct) {
-        this.defaultProduct = defaultProduct;
+    @JsonProperty("database")
+    public DataSourceFactory getDataSourceFactory() {
+        return database;
     }
 
-    @JsonProperty
-    public String getNameUser() {
-        return nameUser;
-    }
 
-    @JsonProperty
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
-    }
-
-    @JsonProperty
-    public String getDefaultName() {
-        return defaultName;
-    }
-
-    @JsonProperty
-    public void setDefaultName(String defaultName) {
-        this.defaultName = defaultName;
-    }
 }

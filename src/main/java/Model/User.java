@@ -1,21 +1,34 @@
 package Model;
 
-import org.hibernate.validator.constraints.Length;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "1919ShopUser")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "UserID")
+    int userID;
+    @Column(name = "Email")
+    String email;
+    @Column(name = "Password")
+    String passwd;
+//    @OneToOne
+//    Address address;
 
-    @Length(max=10)
-    private String username;
+    public User(String email, String passwd) {
+        this.email = email;
+        this.passwd = passwd;
+    }
 
-    @Length(max = 15)
-    private String passwd;
+    public User() {
+    }
 
-    private String email;
-
-    private String province;
-
-    private String city;
-
-    private int housenr;
-
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 }

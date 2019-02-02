@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13fc85fe-7d6a-4f2e-80cc-4322b408a182" name="Default Changelist" comment="" />
+    <list default="true" id="13fc85fe-7d6a-4f2e-80cc-4322b408a182" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1919ShopAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1919ShopAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Resource/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resource/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebshopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebshopApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebshopConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebshopConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hybernate.cfg.xml.fxml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,10 +27,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="20" selection-start-line="20" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+            <state relative-caret-position="276">
+              <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -24,65 +61,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="44">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/WebshopApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-20">
+              <caret line="17" column="118" lean-forward="true" selection-start-line="17" selection-start-column="106" selection-end-line="17" selection-end-column="118" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#509#524#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/WebshopConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#586#587#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
-                <element signature="e#722#723#0" expanded="true" />
-                <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#995#996#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1221#1222#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-                <element signature="e#1305#1306#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1411#1412#0" expanded="true" />
-                <element signature="e#1467#1468#0" expanded="true" />
-                <element signature="e#1501#1502#0" expanded="true" />
-                <element signature="e#1573#1574#0" expanded="true" />
-                <element signature="e#1619#1620#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="364">
+              <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/UserDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -90,8 +101,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Resource/UserResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            <state relative-caret-position="368">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Registration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,41 +140,52 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Service/WebshopConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/WebshopApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resourse/UserResourse.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resource/UserResourse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/WebshopApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hybernate.cfg.xml.fxml" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/1919Shop.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/WebshopConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/Resource/UserResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/hybernate.cfg.xml.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Registration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/WebshopApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/User.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="964" />
+    <option name="x" value="14" />
     <option name="y" value="-6" />
     <option name="width" value="942" />
     <option name="height" value="1048" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -171,14 +218,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1919ShopAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1919ShopAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -189,17 +228,33 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Resource" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="1919ShopAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1919ShopAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1919ShopAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1919ShopAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548102982278" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549131478221" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IPSEN3/backend/Ipsen-3-Back-end" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -210,6 +265,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,6 +281,21 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="WebshopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebshopApplication" />
+      <module name="1919ShopAPI" />
+      <option name="PROGRAM_PARAMETERS" value="server config.yml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WebshopApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -240,18 +313,19 @@
       <workItem from="1547996354743" duration="7601000" />
       <workItem from="1548103292758" duration="2084000" />
       <workItem from="1548440647038" duration="53000" />
-      <workItem from="1549109665876" duration="1095000" />
+      <workItem from="1549109665876" duration="13991000" />
+      <workItem from="1549128318852" duration="3153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22664000" />
+    <option name="totallyTimeSpent" value="38713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="-6" width="1892" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26438653" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1286645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -260,8 +334,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Persistence" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -269,7 +343,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32900432" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
@@ -284,6 +358,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="SciView" order="10" />
+      <window_info anchor="right" id="CDI" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,92 +372,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hybernate.cfg.xml.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/UserDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/WebshopConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        <state relative-caret-position="276">
+          <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="44">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Resource/UserResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hybernate.cfg.xml.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/WebshopApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        <state relative-caret-position="-20">
+          <caret line="17" column="118" lean-forward="true" selection-start-line="17" selection-start-column="106" selection-end-line="17" selection-end-column="118" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#509#524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Resource/UserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/WebshopConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="48">
+          <caret line="20" selection-start-line="20" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1573#1574#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>

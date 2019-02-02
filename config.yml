@@ -1,6 +1,19 @@
-productTemplate: Product1
-defaultProduct: defaultProduct
-nameUser: John Doe
-defaultName: Mah Dude
-passwd: test123
-email: test@test.com
+name: api
+server:
+  rootPath: /api
+database:
+  driverClass: org.mariadb.jdbc.Driver
+  user: root
+  password: Banaan
+  url: jdbc:mysql://94.209.248.59:3306/1919Shop
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  maxWaitForConnection: 1s
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+  validationQueryTimeout: 3s
+  minSize: 8
+  maxSize: 32
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute
