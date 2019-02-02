@@ -1,5 +1,7 @@
 package Resource;
 
+import Model.Address;
+import Model.Registration;
 import Model.User;
 import Persistance.UserDao;
 import io.dropwizard.hibernate.UnitOfWork;
@@ -23,4 +25,6 @@ public class UserResource {
         System.out.println("got good request");
         return userDao.insert(user);
     }
+
+
 }

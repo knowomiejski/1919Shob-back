@@ -1,5 +1,7 @@
 package Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,26 +9,73 @@ import javax.persistence.*;
 public class Address {
 
     @Id
-    @GeneratedValue
     @Column(name = "AddressID")
-    int AddressID;
-    @Column(name = "Province")
-    String province;
-    @Column(name = "City")
-    String city;
-    @Column(name = "Street")
-    String street;
-    @Column(name = "HouseNr")
-    String housenr;
+    private int addressID;
 
-    public Address(String province, String city, String street, String housenr) {
+    @Column(name = "Province")
+    @JsonProperty
+    private String province;
+
+    @Column(name = "City")
+    @JsonProperty
+    private String city;
+
+    @Column(name = "Street")
+    @JsonProperty
+    private String street;
+
+    @Column(name = "HouseNr")
+    @JsonProperty
+    private String housenr;
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "addressID=" + addressID +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", housenr='" + housenr + '\'' +
+                '}';
+    }
+
+    public int getAddressID() {
+        return addressID;
+    }
+
+    public void setAddressID(int addressID) {
+        this.addressID = addressID;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
         this.province = province;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
         this.street = street;
+    }
+
+    public String getHousenr() {
+        return housenr;
+    }
+
+    public void setHousenr(String housenr) {
         this.housenr = housenr;
     }
-
-    public Address() {
-    }
-
 }
