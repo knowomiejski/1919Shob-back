@@ -1,11 +1,11 @@
 package Resource;
 
-import Model.Address;
-import Model.Registration;
 import Model.User;
 import Persistance.UserDao;
+import io.dropwizard.auth.Auth;
 import io.dropwizard.hibernate.UnitOfWork;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -21,10 +21,17 @@ public class UserResource {
 
     @POST
     @UnitOfWork
+    @RolesAllowed("Admin")
     public User add(User user){
         System.out.println("got good request");
         return userDao.insert(user);
     }
 
+    @GET
+    @UnitOfWork
+    @RolesAllowed("Admin")
+    public User get(@Auth User user){
+        return userDao.selectByUsername(user.getName());
+    }
 
 }

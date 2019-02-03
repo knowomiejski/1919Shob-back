@@ -17,3 +17,21 @@ database:
   checkConnectionWhileIdle: true
   evictionInterval: 10s
   minIdleTime: 1 minute
+logging:
+  level: INFO
+  loggers:
+    "org.hibernate.SQL":
+      level: DEBUG
+      additive: true
+      appenders:
+        - type: console
+          threshold: WARN
+          target: stderr
+
+    "org.hibernate.type":
+      level: TRACE
+      additive: true
+      appenders:
+        - type: console
+          threshold: WARN
+          target: stderr

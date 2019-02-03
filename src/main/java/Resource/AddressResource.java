@@ -1,13 +1,12 @@
 package Resource;
 
 import Model.Address;
+import Model.User;
 import Persistance.AddressDao;
+import io.dropwizard.auth.Auth;
 import io.dropwizard.hibernate.UnitOfWork;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/address")
@@ -21,10 +20,9 @@ public class AddressResource {
         this.addressDao = addressDao;
     }
 
-    @POST
+    @GET
     @UnitOfWork
-    public Address add(Address address) {
-        System.out.println("got good request");
-        return addressDao.insert(address);
+    public Address get(@Auth User user) {
+        return addressDao.findById(user.getUserID());
     }
 }

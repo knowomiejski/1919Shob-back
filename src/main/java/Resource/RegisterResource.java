@@ -6,6 +6,7 @@ import Model.Registration;
 import Model.User;
 import Persistance.AddressDao;
 import Persistance.UserDao;
+import Utilities.PasswordUtility;
 import io.dropwizard.hibernate.UnitOfWork;
 
 import javax.ws.rs.Consumes;
@@ -30,8 +31,9 @@ public class RegisterResource {
     @UnitOfWork
     public User add(Registration registration) {
         User newUser = new User();
-        newUser.setEmail(registration.getEmail());
-        newUser.setPassword(registration.getPasswd());
+        newUser.setName(registration.getEmail());
+        String passwdHashed = PasswordUtility.hashPassword(registration.getPasswd());
+        newUser.setPassword(passwdHashed);
         User registerdUser = userDao.insert(newUser);
 
         Address newAddress = new Address();
