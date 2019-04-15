@@ -11,7 +11,7 @@ public class UnAuthorizedHandler implements UnauthorizedHandler {
     public Response buildResponse(String prefix, String realm) {
         return Response.status(Response.Status.UNAUTHORIZED)
                 .type(MediaType.TEXT_PLAIN_TYPE)
-                .entity("Not authorized, pls stop :(")
+                .entity("Not authorized :(")
                 .build();
     }
 }

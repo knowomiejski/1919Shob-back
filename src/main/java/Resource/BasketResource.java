@@ -1,12 +1,14 @@
 package Resource;
 
 import Model.Basket;
+import Model.Message;
 import Model.Product;
 import Model.User;
 import Persistance.BasketDao;
 import Persistance.ProductDao;
 import io.dropwizard.auth.Auth;
 import io.dropwizard.hibernate.UnitOfWork;
+import jdk.nashorn.internal.objects.annotations.Getter;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -27,13 +29,21 @@ public class BasketResource {
     @POST
     @UnitOfWork
     public Basket add(@Auth User user, Basket basket) {
-        return basketDao.insert(basket);
+        return basketDao.addToBasket(basket);
     }
 
     @GET
     @UnitOfWork
     public List<Product> get(@Auth User user) {
-        List<Basket> productIDs = basketDao.getProducts(user);
+        List<Basket> productIDs = basketDao.getProducts(user.getUserID());
         return productDao.getListByIDs(productIDs);
     }
+
+    @GET
+    @Path("/checkout")
+    @UnitOfWork
+    public Message delete(@Auth User user) {
+        return new Message(basketDao.deleteUserBasket(user));
+    }
+
 }

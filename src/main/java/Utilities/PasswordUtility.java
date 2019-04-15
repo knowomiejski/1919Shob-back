@@ -23,8 +23,12 @@ public class PasswordUtility {
 
     public static boolean checkHash(String dbPasswd, String oldUnhashedPasswd) {
 
-        boolean matched = BCrypt.checkpw(oldUnhashedPasswd, dbPasswd);
+        try {
+            boolean matched = BCrypt.checkpw(oldUnhashedPasswd, dbPasswd);
+            return matched;
 
-        return matched;
+        } catch (Exception noentry) {
+            return false;
+        }
     }
 }

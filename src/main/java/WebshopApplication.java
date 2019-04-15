@@ -11,14 +11,20 @@ import Security.AuthenticationService;
 import Security.AuthorizerService;
 import Security.UnAuthorizedHandler;
 import io.dropwizard.Application;
-import io.dropwizard.auth.*;
+import io.dropwizard.auth.AuthDynamicFeature;
+import io.dropwizard.auth.AuthValueFactoryProvider;
 import io.dropwizard.auth.basic.BasicCredentialAuthFilter;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.hibernate.UnitOfWorkAwareProxyFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
+
+import javax.servlet.DispatcherType;
+import javax.servlet.FilterRegistration;
+import java.util.EnumSet;
 
 public class WebshopApplication extends Application<WebshopConfig> {
 
@@ -34,16 +40,25 @@ public class WebshopApplication extends Application<WebshopConfig> {
     };
 
     @Override
-    public void initialize(Bootstrap<WebshopConfig> bootstrap){
+    public void initialize(Bootstrap<WebshopConfig> bootstrap) {
 
         bootstrap.addBundle(hibernate);
     }
 
 
-    public void setupAuth(Environment environment,HibernateBundle hibernate, UserDao userDao){
+    public void setupAuth(Environment environment, HibernateBundle hibernate, UserDao userDao) {
 
         AuthenticationService auth = new UnitOfWorkAwareProxyFactory(hibernate)
                 .create(AuthenticationService.class, UserDao.class, userDao);
+
+        final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);
+
+        cors.setInitParameter("allowedOrigins", "*");
+        cors.setInitParameter("allowedHeaders", "X-Requested-With,Content-Type,Accept,Origin,Authorization");
+        cors.setInitParameter("allowedMethods", "OPTIONS,GET,PUT,POST,DELETE,HEAD");
+        cors.setInitParameter(CrossOriginFilter.ALLOW_CREDENTIALS_PARAM, "true");
+        cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
+
 
         environment.jersey().register(
                 new AuthDynamicFeature(
@@ -74,7 +89,7 @@ public class WebshopApplication extends Application<WebshopConfig> {
         final ProductResource productResource = new ProductResource(productDao);
         final BasketResource basketResource = new BasketResource(basketDao, productDao);
 
-        setupAuth(environment,hibernate, userDao);
+        setupAuth(environment, hibernate, userDao);
 
         environment.jersey().register(userResource);
         environment.jersey().register(addressResource);

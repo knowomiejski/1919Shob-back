@@ -1,30 +1,39 @@
 package Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "Basket")
-public class Basket {
+public class Basket implements Serializable {
 
     @Id
     @Column(name = "UserBasketID")
     @JsonProperty
     private int userBasketID;
 
+    @Id
     @Column(name = "ProductBasketID")
     @JsonProperty
     private int productBasketID;
+
+
+    @Column(name = "Amount")
+    @JsonProperty
+    private int amount = -1;
 
     @Override
     public String toString() {
         return "Basket{" +
                 "userBasketID=" + userBasketID +
                 ", productBasketID=" + productBasketID +
+                ", amount=" + amount +
                 '}';
     }
 
@@ -42,5 +51,13 @@ public class Basket {
 
     public void setProductBasketID(int productBasketID) {
         this.productBasketID = productBasketID;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

@@ -30,7 +30,7 @@ public class ProductResource {
     @DELETE
     @UnitOfWork
     @RolesAllowed("Admin")
-    public boolean delete(Product product){
+    public boolean delete(Product product) {
         return productDao.delete(product);
     }
 

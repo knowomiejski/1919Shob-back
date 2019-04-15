@@ -8,16 +8,17 @@ import io.dropwizard.auth.Authenticator;
 import io.dropwizard.auth.basic.BasicCredentials;
 import io.dropwizard.hibernate.UnitOfWork;
 
-import javax.inject.Singleton;
 import java.util.Optional;
 
+//import javax.inject.Singleton;
 
-@Singleton
+
+//@Singleton
 public class AuthenticationService implements Authenticator<BasicCredentials, User> {
 
     UserDao userDao;
 
-    public AuthenticationService (UserDao userDao) {
+    public AuthenticationService(UserDao userDao) {
         this.userDao = userDao;
     }
 
@@ -26,20 +27,17 @@ public class AuthenticationService implements Authenticator<BasicCredentials, Us
     @UnitOfWork
     public Optional<User> authenticate(BasicCredentials basicCredentials) throws AuthenticationException {
         User user = userDao.selectByUsername(basicCredentials.getUsername());
-        System.err.println("User Passwd: "+ user.getPassword());
 
         boolean samepasswd = PasswordUtility.checkHash(user.getPassword(), basicCredentials.getPassword());
 
-        if(samepasswd){
-            System.err.println("User ID: " + user.getUserID());
-            if (user.getUserID() == 2){
+        if (samepasswd) {
+            if (user.getUserID() == 1) {
                 String[] adminroles = {"Admin", "Guest"};
                 user.setRoles(adminroles);
             }
             else {
-                String[] guestroles = {"Guest"};
-                user.setRoles(guestroles);
-                System.err.println("In here");
+                String[] normalroles = {"Guest"};
+                user.setRoles(normalroles);
             }
 
             return Optional.of(user);
@@ -47,4 +45,5 @@ public class AuthenticationService implements Authenticator<BasicCredentials, Us
 
         return Optional.empty();
     }
+
 }

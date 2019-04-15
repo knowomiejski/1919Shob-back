@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.security.Principal;
 
 @Entity
-@Table(name = "1919ShopUser")
 public class User implements Principal {
 
     @Id
@@ -22,6 +21,7 @@ public class User implements Principal {
 
     @Column(name = "Password")
     @JsonProperty
+    @JsonIgnore
     private String password;
 
     @JsonIgnore
@@ -38,6 +38,7 @@ public class User implements Principal {
     }
 
     @Override
+    @JsonIgnore
     public String getName() {
         return email;
     }
@@ -54,14 +55,17 @@ public class User implements Principal {
         this.email = email;
     }
 
+    @JsonIgnore
+
     public String getPassword() {
         return password;
     }
-
+    @JsonIgnore
     public void setPassword(String password) {
         this.password = password;
     }
 
+    @JsonProperty
     public String[] getRoles() {
         return roles;
     }

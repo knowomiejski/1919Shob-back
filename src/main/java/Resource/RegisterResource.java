@@ -30,19 +30,24 @@ public class RegisterResource {
     @POST
     @UnitOfWork
     public User add(Registration registration) {
-        User newUser = new User();
-        newUser.setName(registration.getEmail());
-        String passwdHashed = PasswordUtility.hashPassword(registration.getPasswd());
-        newUser.setPassword(passwdHashed);
-        User registerdUser = userDao.insert(newUser);
+        User registerdUser = new User();
 
-        Address newAddress = new Address();
-        newAddress.setAddressID(registerdUser.getUserID());
-        newAddress.setProvince(registration.getProvince());
-        newAddress.setCity(registration.getCity());
-        newAddress.setStreet(registration.getStreet());
-        newAddress.setHousenr(registration.getHousenr());
-        addressDao.insert(newAddress);
+        if (PasswordUtility.checkPassword(registration.getPasswd())) {
+            User newUser = new User();
+            newUser.setName(registration.getEmail());
+            String passwdHashed = PasswordUtility.hashPassword(registration.getPasswd());
+            newUser.setPassword(passwdHashed);
+            registerdUser = userDao.insert(newUser);
+
+            Address newAddress = new Address();
+            newAddress.setAddressID(registerdUser.getUserID());
+            newAddress.setProvince(registration.getProvince());
+            newAddress.setCity(registration.getCity());
+            newAddress.setStreet(registration.getStreet());
+            newAddress.setHousenr(registration.getHousenr());
+            addressDao.insert(newAddress);
+        }
+
 
         return registerdUser;
     }

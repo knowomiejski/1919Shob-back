@@ -26,9 +26,15 @@ public class UserDao extends AbstractDAO<User> {
     }
 
     public User selectByUsername(String username) {
-        Query<User> query = currentSession().createQuery("from User user where user.email = :email", User.class);
-        query.setParameter("email", username);
-        return query.list().get(0);
+        try {
+            Query<User> query = currentSession().createQuery("from User user where user.email = :email", User.class);
+            query.setParameter("email", username);
+
+            return query.list().get(0);
+        }
+        catch (Exception outofbounds){
+            return new User();
+        }
     }
 
     public User insert(User user) {

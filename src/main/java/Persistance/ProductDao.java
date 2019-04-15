@@ -45,10 +45,14 @@ public class ProductDao extends AbstractDAO<Product> {
     public List<Product> getListByIDs(List<Basket> list) {
         List<Product> productsInBasket = new ArrayList<>();
         for (Basket basket : list) {
-            int id = basket.getProductBasketID();
-            Query<Product> query = currentSession().createQuery("from Product p where p.productID = :productID");
-            query.setParameter("productID", id);
-            productsInBasket.add(query.list().get(0));
+            int amountcounter = 0;
+            while (amountcounter < basket.getAmount()) {
+                int id = basket.getProductBasketID();
+                Query<Product> query = currentSession().createQuery("from Product p where p.productID = :productID");
+                query.setParameter("productID", id);
+                productsInBasket.add(query.list().get(0));
+                amountcounter = amountcounter + 1;
+            }
         }
         return productsInBasket;
     }

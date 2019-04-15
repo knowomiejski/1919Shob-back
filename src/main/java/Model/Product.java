@@ -25,7 +25,7 @@ public class Product {
 
     @Column(name = "Price")
     @JsonProperty
-    private String price;
+    private double price;
 
     @Column(name = "Picture")
     @JsonProperty

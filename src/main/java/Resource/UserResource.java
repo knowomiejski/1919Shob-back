@@ -2,6 +2,7 @@ package Resource;
 
 import Model.User;
 import Persistance.UserDao;
+import Security.AuthenticationService;
 import io.dropwizard.auth.Auth;
 import io.dropwizard.hibernate.UnitOfWork;
 
@@ -14,23 +15,32 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class UserResource {
     private final UserDao userDao;
+    private final AuthenticationService authenticationService;
 
     public UserResource(UserDao userDao) {
         this.userDao = userDao;
+        this.authenticationService = new AuthenticationService(userDao);
     }
 
     @POST
     @UnitOfWork
     @RolesAllowed("Admin")
-    public User add(User user){
+    public User add(User user) {
         System.out.println("got good request");
         return userDao.insert(user);
     }
 
+
+    @GET
+    @Path("/login")
+    public User logIn(@Auth User user) {
+        System.err.println("got good request");
+        return user;
+    }
+
     @GET
     @UnitOfWork
-    @RolesAllowed("Admin")
-    public User get(@Auth User user){
+    public User get(@Auth User user) {
         return userDao.selectByUsername(user.getName());
     }
 
